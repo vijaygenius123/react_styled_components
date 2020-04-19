@@ -123,3 +123,24 @@ Run the below command to run the dev server
 ```bash
 npx webpack-dev-server --mode development
 ```
+
+## Setup Hot Reloading
+
+```bash
+npm install react-hot-loader
+```
+In App.js
+```js
+import React from 'react';
+import { hot } from 'react-hot-loader'; <- New
+import './App.css'
+
+const App = () => (
+
+    <div className="App">
+        <h1>Hello World !!</h1>
+    </div>
+)
+
+export default hot(module)(App); <- Changed
+```
