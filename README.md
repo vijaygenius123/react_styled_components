@@ -25,3 +25,47 @@ Setup .babelrc
     ]
 }
 ```
+
+## Simple React App Setup
+
+Install react and react-dom 
+
+```bash
+npm install --save react react-dom
+```
+In src Create
+1. index.js
+2. App.js 
+3. App.css 
+
+In App.js Create a simple component like below
+
+```css
+.App{
+    margin: 1rem;
+    font-family: Arial, 'sans-serif';
+    color: #222222;
+}
+```
+
+
+```js
+import React from "react"
+import "./App.css"
+
+const App = () => (
+    <div className='App'>
+    <h1>Hello World </h1>
+    </div>
+)
+```
+
+In index.js
+```js
+import React from "react"
+import ReactDOM from "react-dom"
+import App from './App'
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+```
+
